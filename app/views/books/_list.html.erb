@@ -1,3 +1,14 @@
+<h1>User info</h1>
+
+
+  <p><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
+  <p>neme：<%= user.name %></p>
+  <p>introduction：<%= user.introduction %></p>
+  
+  <!--edit 編集部分-->
+  <p><%= link_to "プロフィール編集", edit_user_path(user) %></p>
+
+
 <h1>New book</h1>
 <!-- form_with部分 -->
 <%= form_with model: book, local:true do |f| %>
