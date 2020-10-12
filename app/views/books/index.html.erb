@@ -1,1 +1,13 @@
+<h1>Bookers2</h1>
+
+<% @books.each do |book| %>
+  <p>Bookers2</p>
+  <span>タイトル<%= book.title %></span>
+  <span>本文: <%= book.body %></span>
+
+<% end %>
+
+
+<p>aaaaaaaa</p>
+
 <%= render 'books/list', book: @book, user: @user %>
