@@ -8,4 +8,7 @@
 <% @books.each do |book| %>
   <span>タイトル:<%= book.title %></span>
   <span>本文: <%= book.body %></span>
+  <%= link_to "show", book_path(book.id) %>
+  <!--(@book) %>-->
+
 <% end %>
