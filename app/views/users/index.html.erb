@@ -1,9 +1,28 @@
+<div class = "container">
+ <div class = "row">
+
 <%= render 'books/list', book: @book, user: @user %>
 
+  <div class = "col-xs-9">
+
+
 <h1>Users</h1>
+<table>
+<tr>
+  <th>image</th><th>name</th>
+</tr>
+
 <% @users.each do |user| %>
-  <p>image: <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
-  <p>name: <%= user.name %></p>
-  <%= link_to "show", user_path(user.id) %>
+
+ <tr>
+   <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></td>
+   <td> <%= user.name %></td>
+  <td><%= link_to "show", user_path(user.id) %></td>
+ </tr>
 
 <% end %>
+
+</table>
+  </div
+ </div>
+</div>

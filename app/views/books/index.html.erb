@@ -1,14 +1,25 @@
+<div class = "container">
+ <div class = "row">
+  
 <%= render 'books/list', book: @book, user: @user %>
 
+  <div class = "col-xs-9">
 
 <h1>Books</h1>
-
-
+<table>
+ <tr>
+  <th> </th><th>title</th><th>Opinion</th>
+ </tr>
 
 <% @books.each do |book| %>
- <p>image: <%= attachment_image_tag book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
-  <span>title <%= link_to book.title, book_path(book.id) %> </span>
-  <span>Opinion <%= book.body %></span>
-  <!--(@book) %>-->
-
+<tr>
+  <td><span><%= attachment_image_tag book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></span></td>
+  <td><span> <%= link_to book.title, book_path(book.id) %> </span></td>
+  <td><span> <%= book.body %></span></td>
+</tr>
 <% end %>
+
+</table>
+  </div>
+ </div>
+</div>

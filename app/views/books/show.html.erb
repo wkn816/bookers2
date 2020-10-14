@@ -1,14 +1,27 @@
+<div class = "container">
+ <div class = "row">
+
 <%= render 'books/list', book: @booknew, user: @user %>
+    
+   <div class = "col-xs-9">
 
 <h1>Book detail</h1>
+<table>
+ <tbody>
+  <tr>
+    <!--@book.userは本を投稿した人の画像を出すので@userではダメ-->
+   <td><span><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %><br>
+             <%= @user.name %></span></td>
+   <td><span><%= @book.title %></span></td>
+   <td><spna><%= @book.body %></span></td>
 
-<!--@book.userは本を投稿した人の画像を出すので@userではダメ-->
-<p><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
-<p><%= @book.title %></p>
-<p><%= @book.body %></p>
-<p><%= @user.name %></p>
-
-<% if @book.user == current_user %>
-  <%= link_to "edit", edit_book_path(@book) %>
-  <%= link_to "delete", book_path(@book), method: :delete %>
-<% end %>
+   <td> <span><% if @book.user == current_user %> </span> </td>
+   <td> <span><%= link_to "edit", edit_book_path(@book) %> </span></td>
+   <td> <span><%= link_to "delete", book_path(@book), method: :delete %></span></td>
+   <% end %>
+  </tr>
+ </tbody>
+</table>
+  </div>
+ </div>
+</div>
