@@ -1,10 +1,21 @@
 <h1>Editing Book</h1>
 <!-- form_with部分 -->
+  <% if flash[:notice] %>
+   <p><%= flash[:notice] %></p>
+  <% end %>
+
+ <% if @book.errors.any? %>  
+    <%= @book.errors.count %>error
+    <% @book.errors.full_messages.each do |message| %>
+    <%= message %>  
+    <% end %>  
+  <% end %>
+  
 <%= form_with model:@book, local: true do |book| %>
   <h4>title</h4>
   <%= book.text_field :title %>
   <h4>Opinion</h4>
   <%= book.text_field :body %><br>
   
-  <%= book.submit 'UpdeteBook' %>
+  <%= book.submit 'Update Book' %>
 <% end %>
