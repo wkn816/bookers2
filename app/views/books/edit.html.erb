@@ -18,4 +18,6 @@
   <%= book.text_field :body %><br>
   
   <%= book.submit 'Update Book' %>
+  <%= link_to "Show", book_path %>
+  <%= link_to "Back", books_path %>
 <% end %>

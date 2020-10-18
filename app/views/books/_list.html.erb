@@ -5,22 +5,23 @@
    <% end %>
 
   <h1>User info</h1>
-  <p><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
+
+  <p><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %></p>
   <p>neme：<%= user.name %></p>
   <p>introduction：<%= user.introduction %></p>
-  
-  <%= link_to edit_user_path(user), class: 'btn btn-default' do %>
-    <i class="fas fa-wrench "></i> 
-  <% end %>
- 
-<% if book.errors.any? %>
-          <%= book.errors.count %>件のエラーが発生しました
-          <% book.errors.full_messages.each do |message| %>
-            <%= message %>
-          <% end %>
-        <% end %>
 
-        
+  <%= link_to edit_user_path(user), class: 'btn btn-default' do %>
+    <i class="fas fa-user-cog"></i>
+  <% end %>
+
+<% if book.errors.any? %>
+    <%= book.errors.count %>件のエラーが発生しました
+    <% book.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+<% end %>
+
+
 
 <h1>New book</h1>
 <!-- form_with部分 -->
@@ -36,6 +37,6 @@
 
 <% end %>
 
- 
+
 
 </div>

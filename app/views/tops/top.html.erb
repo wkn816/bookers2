@@ -1,3 +1,5 @@
+ <%= render 'layouts/notifications' %>
+
 <div class = "container">
   <div class = "row">
     <div class="mx-auto" style="width: 720px;">
@@ -7,13 +9,11 @@
        about various books!
       </p>
        <div class = "botn-log-in">
-        <%= link_to "Log In", new_user_session_path %>
+        <%= link_to "Log in", new_user_session_path %>
        </div>
        <div class = "botn-sign-up">
        <%= link_to "Sign Up", new_user_registration_path %>
        </div>
-         
-
     </div>
   </div>
 </div>

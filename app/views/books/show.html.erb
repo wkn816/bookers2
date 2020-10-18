@@ -1,23 +1,27 @@
 <div class = "container">
  <div class = "row">
 
-　　<%= render 'books/list', book: @booknew, user: @user %>
-    
+<%= render 'books/list', book: @booknew, user: @user %>
+
   <div class = "col-xs-9">
-　　<h1>Book detail</h1>
+ <h1>Book detail</h1>
 
 <table class="table">
-　　<thead>
-  　　<tr>
-    　<th scope="col"> </th><th scope="col"></th><th scope="col"></th><th scope="col"></th>
-  　　</tr>
-　　</thead>
+    <thead>
+  <tr>
+<th scope="col"> </th><th scope="col"></th><th scope="col"></th><th scope="col"></th>
+  </tr>
+</thead>
  <tbody>
   <tr>
     <!--@book.userは本を投稿した人の画像を出すので@userではダメ-->
-   <td><span><%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %><br>
-             <%= @user.name %></span></td>
-   <td><span><%= @book.title %></span></td>
+
+    <td><%= link_to attachment_image_tag(@book.user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg"), user_path %>
+    <%= link_to @user.name, user_path(@user.id)%></td>
+
+   <td><span><%= link_to @book.title, book_path(@book.id) %></span></td>
+
+
    <td><spna><%= @book.body %></span></td>
    <td> <span><% if @book.user == current_user %> </span> </td>
    <td> <span><%= link_to "Edit", edit_book_path(@book) %> </span></td>

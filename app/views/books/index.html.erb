@@ -9,14 +9,15 @@
 <table class="table">
 <thead>
   <tr>
-    <th scope="col"> </th><th scope="col">title</th><th scope="col">Opinion</th>
+     <th>title</th> <th>Opinion</th>
   </tr>
 </thead>
 
 <% @books.each do |book| %>
 <tbody>
 <tr>
-  <td><span><%= attachment_image_tag book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></span></td>
+  <td><span><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg"), user_path(book.user_id) %></span></td>
+
   <td><span> <%= link_to book.title, book_path(book.id) %> </span></td>
   <td><span> <%= book.body %></span></td>
 </tr>
