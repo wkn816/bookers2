@@ -6,12 +6,15 @@
 
   <h1>User info</h1>
 
-  <p><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %></p>
+  <p><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
   <p>neme：<%= user.name %></p>
   <p>introduction：<%= user.introduction %></p>
-
-  <%= link_to edit_user_path(user), class: 'btn btn-default' do %>
+<!--<div class ="btn">-->
+  <button class = "edit">
     <i class="fas fa-user-cog"></i>
+  <%= link_to edit_user_path(user), class: 'btn btn-default' do %>
+  </button>
+<!--</div>-->
   <% end %>
 
 <% if book.errors.any? %>
