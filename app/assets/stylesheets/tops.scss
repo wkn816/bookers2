@@ -1,4 +1,35 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+.title{
+  padding: 20px 0 5px 60px;
+}
+.title-name{
 
+}
+.btn{
+  margin-left: 100px;
+}
+.botn-log-in{
+  width: 400px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  background: #17a2b8;
+  margin-bottom: 10px;
+}
+.botn-sign-up{
+  width: 400px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  background: #28a745;
+}
+.px-3{
+  margin-top: 20px;
+}

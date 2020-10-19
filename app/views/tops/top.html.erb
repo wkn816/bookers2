@@ -1,21 +1,39 @@
+ <link rel="stylesheet" href="tops.scss" />
+
+
  <%= render 'layouts/notifications' %>
 
 
 <div class = "container">
+  <div class="mx-auto" style="width: 720px;">
+
   <div class = "row">
-    <div class="mx-auto" style="width: 720px;">
-     <h2>welcome to<i class="fas fa-book"></i> Bookers !!</h2>
-      <p>In <i class="fas fa-book"></i>Bookers,<br>
-       you can share and exchange your opinions , inpressions , and emotions<br>
-       about various books!
-      </p>
-       <div class = "botn-log-in">
+     <div class ="title">
+       <div class ="title-nema">
+         <h1>welcome to<i class="fas fa-book"></i> Bookers !!</h1>
+       </div>
+       <div class ="title-text">
+           <p>In <i class="fas fa-book"></i>Bookers,<br>
+              you can share and exchange your opinions , inpressions , and emotions<br>
+              about various books!
+           </p>
+       </div>
+     </div>
+  </div>
+
+   <div class ="row">
+    <!--<div class ="col-md-3">-->
+    <div class ="btn">
+       <button class = "botn-log-in">
         <%= link_to "Log in", new_user_session_path %>
-       </div>
-       <div class = "botn-sign-up">
+       </button>
+       <button class = "botn-sign-up">
        <%= link_to "Sign Up", new_user_registration_path %>
-       </div>
+       </button>
+    <!--</div>-->
     </div>
+   </div>
+
   </div>
 </div>
 
