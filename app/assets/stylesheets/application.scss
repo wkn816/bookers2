@@ -16,6 +16,21 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+a:visited { color:white; text-decoration:none }
 
-.brand{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-brand p{
+  margin-top: 10px;
+}
+
+nav{
+  color: #fff;
+}
+
+.nav-item i{
+  padding-left: 10px;
 }

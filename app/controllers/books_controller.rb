@@ -37,7 +37,7 @@ class BooksController < ApplicationController
       render :edit
     else
       @book.user = current_user
-      render 
+      render :edit
     end
   end
 
