@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :introduction
       t.string :profile_image_id
-      t.timestamps
+      t.timestamps  null: false
     end
   end
 end
