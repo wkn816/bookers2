@@ -20,38 +20,45 @@
 <nav class= "navbar navbar-expand-lg navbar-dark bg-dark" >
  <div class="container">
    <div class = "navbar-brand">
-     <%= link_to "Bookers", root_path %>
+     <%= link_to "Bookers", root_path, class:"tag"%>
    </div>
      <div class ="row">
 
       <% if user_signed_in? %>
       <div class ="nav-item">
        <div class ="col-xs-3" >
-         <i class="fas fa-home">
-           <%= link_to "Home", user_path(current_user.id) %>
-        </i>
-        <i class="fas fa-users">
-          <%= link_to "Users", users_path %>
-        </i>
-        <i class="fas fa-book-open">
-          <%= link_to "Books", books_path %>
-         </i>
-         <i class="fas fa-sign-out-alt">
-          <%= link_to "logout", destroy_user_session_path, method: :delete %>
-         </i>
+      <!--<ul style="list-style: none;">-->
+<ul class="navbar-nav ml-auto">
+
+
+        <li class="">
+           <%= link_to "Home", user_path(current_user.id), class:"tag fas fa-home" %>
+        </li>
+        <li class="">
+          <%= link_to "Users", users_path, class:"tag fas fa-users" %>
+        </li>
+        <li class="">
+          <%= link_to "Books", books_path, class:"tag fas fa-book-open" %>
+         </li>
+         <li class="">
+          <%= link_to "logout", destroy_user_session_path, method: :delete, class:"tag fas fa-sign-out-alt" %>
+        </ul>
+         </li>
       <% else %>
-         <i class="fas fa-home">
-          <%= link_to "Home", root_path %>
-         </i>
-         <i class="fas fa-link">
-          <%= link_to "About", home_about_path %>
-         </i>
-         <i class="fas fa-user-plus">
-          <%= link_to "sign up", new_user_registration_path %>
-         </i>
-         <i class="fas fa-sign-in-alt">
-          <%= link_to "login", new_user_session_path %>
-          </i>
+         <li class="">
+          <%= link_to "Home", root_path, class:"tag fas fa-home" %>
+         </li>
+         <li class="">
+          <%= link_to "About", home_about_path, class:"tag fas fa-link" %>
+         </li>
+         <li class="">
+          <%= link_to "sign up", new_user_registration_path, class:"tag fas fa-user-plus" %>
+         </li>
+         <li class="">
+          <%= link_to "login", new_user_session_path, class:"tag fas fa-sign-in-alt" %>
+          </li>
+
+
        </div>
       </div>
 
@@ -66,10 +73,9 @@
 
 
   <fotter>
-   <div class = "container">
+   <div class = "container mt-5">
     <div class = "row">
-     <div class = "col-4"> </div>
-     <div class = "col-4">
+     <div class="mx-auto">
       <div class ="fotter-logo">CopyRight Infratop.inc</div>
      </div>
     </div>

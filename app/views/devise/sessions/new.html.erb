@@ -1,3 +1,15 @@
+<head>
+    <style>
+     .btn{
+       width: 66px;
+     }
+    </style>
+  </head>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -19,8 +31,13 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <input type="submit" name="commit" value="Log in" class="btn btn-sm btn-primary" data-disable-with="Log in">
   </div>
 <% end %>
+  <%= link_to "Sign up", new_user_registration_path %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %>
 
-<%= render "devise/shared/links" %>
+   </div>
+  </div>
+</div>
+

@@ -23,7 +23,7 @@
   box-sizing: border-box;
 }
 
-.navbar-brand {
+.navbar-dark .navbar-brand {
   color: #fff;
 }
 
@@ -34,4 +34,8 @@ nav{
   margin: 20px 0  0 15px ;
 }
 
+li{
+  list-style-type: none;
+  padding: 8px; /* 左にできる隙間を消す */
+}
 

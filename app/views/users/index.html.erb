@@ -1,31 +1,31 @@
 <div class = "container">
  <div class = "row">
-
 <%= render 'books/list', book: @book, user: @user %>
-  <div class = "col-md-8 offset-md-1">
-
-
+<div class="col-md-8 offset-md-1">
+<table class="table">
 
 <h1>Users</h1>
-<table class="table">
  <thead>
-   <tr>
-     <th scope="col"> image</th><th scope="col">name</th><th scope="col"></th>
-   </tr>
+  <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+  </tr>
  </thead>
 
 <% @users.each do |user| %>
 <tbody>
    <tr>
-     <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %></td>
-     <td> <%= user.name %></td>
-     <td><%= link_to "Show", user_path(user.id) %></td>
+     <th><%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %></th>
+     <th> <%= user.name %></th>
+     <th><%= link_to "Show", user_path(user.id) %></th>
    </tr>
 </tbody>
-
 <% end %>
-
 </table>
+</div>
   </div>
  </div>
-</div>
+
+
+

@@ -5,17 +5,39 @@
    <% end %>
 
   <h1>User info</h1>
+<table class="table">
+  <tbody>
+  <tr>
+  <th><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></th>
+  </tr>
 
-  <p><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></p>
-  <p>neme：<%= user.name %></p>
-  <p>introduction：<%= user.introduction %></p>
+  <tr>
+  <th>neme : <%= user.name %></th>
+  </tr>
+
+  <tr>
+  <th>introduction <%= user.introduction %></th>
+  </tr>
 <!--<div class ="btn">-->
-  <button class = "edit">
-    <i class="fas fa-user-cog"></i>
+  <!--<button class = "edit">-->
+
+  <tr>
+  <th>
+  <div class="row">
   <%= link_to edit_user_path(user), class: 'btn btn-default' do %>
+  <button type="button" class="btn btn-outline-secondary">
+  <i class="fas fa-user-cog">
+  </i>
   </button>
-<!--</div>-->
   <% end %>
+
+  </div>
+  </th>
+  </tr>
+
+</tbody>
+</table>
+<!--</div>-->
 
 <% if book.errors.any? %>
     <%= book.errors.count %>件のエラーが発生しました

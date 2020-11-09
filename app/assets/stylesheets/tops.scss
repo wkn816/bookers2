@@ -5,33 +5,53 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 // a:visited { color:white; text-decoration:none }
-
-.title{
-  padding: 20px 0 5px 60px;
+.tag:visited{
+  color:white; text-decoration:none
 }
-.title-name{
+.title{
+  margin-top : 30px;
+}
+.p{
+  line-height : 30px;
+}
+.a{
+    text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 
+.button1 {
+  display       : inline-block;
+  background    : #17a2b8;/* 背景色     */
+  font-size     : 14px;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 0px 100px;   /* 余白       */
+  color         : #fff;     /* 文字色     */
+  width         : 450px;
+  height        : 28px;
+}
+.btn:visited{
+  color:white; text-decoration:none
 }
 .btn{
-  margin-left: 100px;
+
 }
-.botn-log-in{
-  width: 400px;
-  height: 30px;
-  font-size: 14px;
-  text-align: center;
-  display: block;
-  background: #17a2b8;
-  margin-bottom: 10px;
+.button2 {
+  display       : inline-block;
+  background    : #28a745;
+  font-size     : 14px;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 0px 100px;   /* 余白       */
+  color         : #fff;     /* 文字色     */
+  width         : 450px;
+  height        : 28px;
+  margin-top    : 15px;
 }
-.botn-sign-up{
-  width: 400px;
-  height: 30px;
-  font-size: 14px;
-  text-align: center;
-  display: block;
-  background: #28a745;
-}
-.px-3{
+
+.about{
+  font-size: 40px;
   margin-top: 20px;
 }
